@@ -163,7 +163,7 @@ fn render_obj(
         }
     }
 
-    let write_face_vertex = |sink: &mut io::Write, vertex_index| -> Result<(), ExportError> {
+    let write_face_vertex = |sink: &mut dyn io::Write, vertex_index| -> Result<(), ExportError> {
         if let Some(_) = output_mesh.normals() {
             try_write_mtl!(write!(
                 sink,

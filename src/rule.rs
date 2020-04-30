@@ -234,5 +234,5 @@ impl ToRule for Rc<Mesh> {
 #[derive(Clone)]
 enum RuleInternal {
     Mesh(OutputMeshSource),
-    Invocations(Rc<ToRule>),
+    Invocations(Rc<dyn ToRule>),
 }
